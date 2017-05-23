@@ -1,5 +1,6 @@
 var express = require('express');
 var chalk = require('chalk');
+var fetch = require('node-fetch');
 var exphbs  = require('express-handlebars');
 var app = express();
 
@@ -17,7 +18,24 @@ app.use('/', function(req, res){
   if(!req.query.token) {
     return res.render('error', {layout: false});
   }
-  res.render('index', {layout: false});
+
+  //  Get data
+  fetch(`https://api.github.com/user/repos?access_token=${req.query.token}`)
+    .then(function(res){ return res.json(); })
+    .then(function(repos){
+      //  Repos has LOTS of data,
+      //  you should inspect this to see what you have to play with
+      res.render('index',{
+        layout: false,
+        repos: repos
+      });
+    })
+    .catch(function(err){
+      //  This should throw anything that goes wrong
+      //  should show as red in your terminal
+      console.log(chalk.red(err));
+    });
+
 });
 
 //  Start a server

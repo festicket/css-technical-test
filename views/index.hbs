@@ -6,7 +6,13 @@
   <link rel="stylesheet" type="text/css" href="public/styles.css" />
 </head>
 <body>
-
+  <ul>
+    {{#each repos}}
+      <li>
+        {{this.full_name}}
+      </li>
+    {{/each}}
+  </ul>
   <script src="public/main.js" type="text/javascript" async=true></script>
 </body>
 </html>
