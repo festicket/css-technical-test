@@ -37,7 +37,9 @@ All the data repo data from github is passed to the template context, you can se
 
 The aim of the task is to asses you ability to prioritise data and display it in both a visually appealing and functional way.
 We want to see clean semantic markup. We expect clean efficient css, without the use of a pre-processor.
+
 Spend no more than 3 hours on the project.
+
 Once you are finished please issue a pull request to the original festicket repo.
 If there are features you didn't have time to complete the PR would be a good opportunity to express your intentions and your vision for the completed application.
 A member of the festicket front end team will review your PR, this should give us a lot to talk about in the face to face interviews.
