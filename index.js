@@ -12,6 +12,11 @@ app.use('/public', express.static('public'));
 
 //  Routing
 app.use('/', function(req, res){
+  //  We need an access token for github
+  //  so bail if we do not have one
+  if(!req.query.token) {
+    return res.render('error', {layout: false});
+  }
   res.render('index', {layout: false});
 });
 
