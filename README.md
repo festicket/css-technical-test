@@ -15,7 +15,7 @@ Fork the repo and clone it locally.
 npm install
 ```
 
--Step 3:
+- Step 3:
 
 ```
 npm run start
