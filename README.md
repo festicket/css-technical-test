@@ -33,7 +33,7 @@ Open 'http://localhost:3000?token={your-token-here}', you should see a list of r
 Your task is to create a functional repository viewer.
 The brief is intentionally loose and should give you good scope to get creative.
 Currently only repo names are displayed, add any data you feel is required.
-All the repo data from github is passed to the template context, you can see this in `views/index.hbs`.
+All the [repo data from github](https://developer.github.com/v3/repos/) is passed to the template context, you can see this in `views/index.hbs`.
 
 The aim of the task is to asses you ability to prioritise data and display it in both a visually appealing and functional way.
 We want to see clean semantic markup. We expect clean efficient css, without the use of a pre-processor.
