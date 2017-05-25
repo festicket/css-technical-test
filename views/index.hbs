@@ -1,43 +1,18 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Festicket Technical Test</title>
-    <link rel="stylesheet" type="text/css" href="public/styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Festicket Technical Test</title>
+  <link rel="stylesheet" type="text/css" href="public/styles.css" />
 </head>
-
 <body>
-    <ul class="repos-list">
-        {{#each repos}}
-            <li class="repos-list__item">
-                <article class="repos-item">
-                    <div class="hero">
-                        <figure class="hero__figure">
-                            <img class="hero__image" src="{{this.owner.avatar_url}}" alt="repo owner's photo">
-                            <figcaption>
-                            </figcaption>
-                        </figure>
-                        <span class="hero__name">
-            {{this.owner.login}}
-          </span>
-                    </div>
-                    <header>
-                        <h2 class="titled-link">
-              <a class="titled-link__link" href="{{this.html_url}}" target="_blank">{{this.full_name}} <i class="icon icon--external"></i></a>
-            </h2>
-                    </header>
-                    <p class="timestamp">
-                        Last updated: <time class="js-date timestamp__date" datetime="{{this.updated_at}}">asd</time>
-                    </p>
-                    <p class="description">{{this.description}}</p>
-                </article>
-
-            </li>
-        {{/each}}
-    </ul>
-    <script src="public/main.js" type="text/javascript" async=true></script>
+  <ul>
+    {{#each repos}}
+      <li>
+        {{this.full_name}}
+      </li>
+    {{/each}}
+  </ul>
+  <script src="public/main.js" type="text/javascript" async=true></script>
 </body>
-
 </html>
