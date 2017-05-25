@@ -1,0 +1,35 @@
+.icon {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    display: inline-block;
+    background: #848484;
+}
+
+.icon--external {
+    transform: rotate(45deg);
+    padding: 0.1rem;
+}
+
+.icon--external::before {
+    content: '';
+    display: inline-block;
+    width: 0.15rem;
+    height: 0.5rem;
+    background: #ffffef;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+}
+
+.icon--external::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 0.25rem solid #ffffef;
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent;
+}

@@ -1,4 +1,18 @@
-/*
- *  --------------------------------
- *  Insert styles here
- *  -------------------------------- */
+/*Global*/
+@import url('global/reset.css');
+@import url('global/typography.css');
+@import url('global/icons.css');
+
+/*Atoms*/
+@import url('atoms/headings.css');
+@import url('atoms/img.css');
+@import url('atoms/ul.css');
+
+/*Molecules*/
+@import url('molecules/hero.css');
+@import url('molecules/timestamp.css');
+@import url('molecules/description.css');
+@import url('molecules/titled-link.css');
+
+/*Organisms*/
+@import url('organisms/repos-list.css');
