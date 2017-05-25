@@ -1,0 +1,37 @@
+.description {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    display: inline-block;
+}
+
+.description:not(:empty)::first-letter {
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.description:empty::before {
+    content: 'Description unavailable';
+    display: block;
+    color: #bda299;
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+@media screen and (min-width: 460px) and (max-width: 720px) {
+    .description {
+        font-size: 0.8rem;
+    }
+    .description:not(:empty)::first-letter {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .description {
+        font-size: 1rem;
+    }
+    .description:not(:empty)::first-letter {
+        font-size: 1.4rem;
+    }
+}
